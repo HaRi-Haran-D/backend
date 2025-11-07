@@ -41,6 +41,8 @@ lista.append('mouse')
 print(lista)
 ['python', 45, 2.3, 18.2, 2.3, 45, 115, 'array', 'stack', 'queue', 'boolean', 6.3, 66, 'mouse']
 #one value will be added at the end of the list[]
+
+
 lista.copy()
 ['python', 45, 2.3, 18.2, 2.3, 45, 115, 'array', 'stack', 'queue', 'boolean', 6.3, 66, 'mouse']
 lista.count(45)

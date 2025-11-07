@@ -1,6 +1,6 @@
 #Variable - a container for a value(string, integer, float, boolean)
 #           a variable behaves as if it was the value it contains
-
+'''
 #Strings
 name="Hari"
 print(f"Hello {name}")
@@ -36,3 +36,19 @@ if isStudent:
     print("You are a Student")
 else:
     print("You are not a Student")
+'''
+word = "Concentration"
+a=word
+for i in word:
+    if 'a' in i:
+        a=a.replace('a','')
+    elif 'e' in i:
+        a=a.replace('e','')
+    elif 'i' in i:
+        a=a.replace('i','')
+    elif 'o' in i:
+        a=a.replace('o','')
+    elif 'u' in i:
+        a=a.replace('u','')
+
+print(a)
