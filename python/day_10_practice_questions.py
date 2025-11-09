@@ -9,7 +9,7 @@ for i in value:
 
 #2. declare a name as jessica123 python
 
-name = 'jessica123 python'
+name = 'jessica123   python'
 for i in name:
     if ' ' in i:
         continue
@@ -30,9 +30,10 @@ for i in list1:
 print(list2)
 
 #5. if values has space in between the variable it should print true for space
-name = 'Si v a       C h    a n    d  r  u'
+name = 'Si v a  C h    a n    d  r  u'
 for i in name:
     if ' ' in i:
+        print(end='true')
         continue
     print(i,end='')
 
@@ -41,3 +42,4 @@ for i in d:
     if i%2==0:
         continue
     print(i)
+
