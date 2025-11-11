@@ -10,7 +10,7 @@ print(i)
 
 #to find the index value of a given character in string in reverse order
 i = name.rfind("r")
-i = name.zfill
+#i = name.zfill
 print(i)
 #if a given character is doesnt exist in the string it returns -1
 
@@ -79,5 +79,4 @@ print(card_no[::2])#--> 13-6891-46 is printed
 #it prints every 2nd character of the string
 
 print(card_no[::3])#--> 146-136 is printed
-
     
