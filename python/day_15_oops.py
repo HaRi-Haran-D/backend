@@ -25,7 +25,7 @@
 
 
 class Student:
-    def _init_(self,name,city):
+    def __init__(self,name,city):
         self.name=name
         self.city=city
     def display(self):
@@ -33,5 +33,7 @@ class Student:
         print('from',self.city)
 obj1=Student('Hari','Ambattur')
 #obj1 - object
-#
+#= operator obj=classname
+#class(args)
 obj1.display()
+#accessing the object values
