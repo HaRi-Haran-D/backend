@@ -18,7 +18,7 @@ for i in range(6,1,-1):
     print(space*i,'*')
 '''
 
-'''
+
 for i in range(1,6):
     for j in range(5,i,-1):
         print(' ',end='')
@@ -48,4 +48,4 @@ for i in range(5,0,-2):
         print('*',end=' ')
     print()
 
-
+'''

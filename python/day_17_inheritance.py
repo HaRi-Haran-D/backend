@@ -1,5 +1,6 @@
 #Inheritance
-#inheritance means the process of achieveing and accessing the functions and attributes of the base class from its different derived class is called inheritance
+#inheritance means the process of achieveing and accessing the functions and attributes of the base class from its different derived
+    #class is called inheritance
 #base class is parent class
 #derived class is child class
 #types of inheritance
@@ -42,6 +43,7 @@ s.f1()
 s.f2()
 s.f3()
 '''
+
 '''
 class User:
     def __init__(self,name,password):
