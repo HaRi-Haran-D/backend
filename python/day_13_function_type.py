@@ -48,7 +48,8 @@ deposit(100,23)
 '''
 
 #print statement display the value(result) to user. does nothing. it cant be stored. it does not do
-#return it does not show result to the user. passes value to the another function. return keyword can be stored in variable. it stops the function when executed
+#return it does not show result to the user. passes value to the another function. return keyword can be stored in variable.
+#it stops the function when executed
 '''
 def add(a,b):
     c=a+b
@@ -66,7 +67,7 @@ print(city)
 
 print(std())
 '''
-'''
+
 # 1.
 arry=[[1,2,3],[4,5,6],[7,8,9]]
 arr=[]
@@ -74,7 +75,7 @@ for i in arry:
     for j in i:
         arr.append(j)
 print(arr)
-
+'''
 #2. check the third highest value in a list
 value = [45,18,84,47,91,218]
 
