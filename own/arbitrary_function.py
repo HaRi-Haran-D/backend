@@ -3,6 +3,7 @@
 #arbitrary positional argument
             #for one parameter we can pass multiple arguments
             # * unpacking operator
+
 '''
 def name(*names):
     for i in names:
