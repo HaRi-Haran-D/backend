@@ -98,7 +98,8 @@ print(d.name)
 
 #Protected Access Specifiers
 '''
-protected members we can access within the class from anywhere but from outside of the class we can access only in child classess or sub class
+protected members we can access within the class from anywhere but from outside of the class we
+can access only in child classess or sub class.
 
 we can declare members are protected explicitly by prefixing with single underscore symbol (_)
 ( __ ) leading underscore is private

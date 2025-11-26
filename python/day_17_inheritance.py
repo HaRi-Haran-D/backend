@@ -118,10 +118,12 @@ constructor:
 
 
 '''
-in inheritance all members available in parent class are the default values in the child class, if the child class does not satisfy with the
-parent class implementation, then the child classs is allowed to redefine the method by extending additional function in the child class is
-said to be an method override that is when the child class method has same name same parameter and same return type(function) then
-that method in the class is said to be override the method in the parent class.
+in inheritance all members available in parent class are the default values in the child class,
+if the child class does not satisfy with the parent class implementation, then the child classs
+is allowed to redefine the method by extending additional function in the child class is said to
+be an method override that is when the child class method has same name same parameter and same
+return type(function) then that method in the class is said to be override the method in the
+parent class.
 '''
 
 class Vehicle:
