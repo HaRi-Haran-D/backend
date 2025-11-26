@@ -52,10 +52,11 @@ s.show1()
 '''
 
 '''
-data encapsulation allows to user to restrict the access variable and methods directly and prevent accidental data modification by
-creating private data member and method within the class.
+data encapsulation allows to user to restrict the access variable and methods
+directly and prevent accidental data modification bycreating private data
+member and method within the class.
 
-Types of Encapsulation    
+Types of Encapsulation
 1. public access specifiers - they can able access any were inside the code
 2. private access specifiers - they can be only access within the class
 3. protected access specifiers - accessable within its class and its sub class
@@ -81,6 +82,7 @@ print(p.x)
 p.m1()
 #so, anywhere we can access instance variable
 '''
+
 '''
 class Emp:
     def __init__(self):

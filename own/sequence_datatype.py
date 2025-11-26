@@ -45,5 +45,3 @@ fruit.clear()
 print(fruit)
 
 
-
-
