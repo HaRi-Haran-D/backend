@@ -1,7 +1,7 @@
-import os
-from datetime import datetime
+#import os
+#from datetime import datetime
 
-os.chdir('D:/full_stack/backend/') #to change the path of the directory
+#os.chdir('D:/full_stack/backend/') #to change the path of the directory
 
 #os.mkdir('End') to create a directory
 #os.makedirs('End1/end') to create a directory with sub-folders
@@ -23,7 +23,9 @@ for path,dirs,files in os.walk('D:/full_stack/backend/'):
     print(' ')
 '''
 
-print(os.environ.get('OS'))
+#print(os.environ.get('OS'))
+#print(os.path)
+
 
 
 
