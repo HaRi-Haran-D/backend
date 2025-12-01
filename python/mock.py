@@ -27,6 +27,7 @@ a+=b
 print(a)
 '''
 
+'''
 #4. Program to insert an element at the specific position.
 list1=[1,2,3,4,5]
 value=5
@@ -40,6 +41,7 @@ for i in list1:
     else:
         list2.append(i)
 print(list2)
+'''
 
 '''
 #5. Python program to create a calculator class. Include methods for basic arithmetic operations
@@ -79,3 +81,33 @@ class Triangle(Shape):
 
 class Square(Shape):
 '''
+#7.
+
+class ShoppingCart:
+    def __init__(self):
+        self.items = {}
+
+    def add_item(self, name, price):
+        self.items[name] = price
+        print(f"{name} added to cart.")
+
+    def remove_item(self, name):
+        if name in self.items:
+            del self.items[name]
+            print(f"{name} removed from cart.")
+        else:
+            print(f"{name} not found in cart.")
+
+    def total_price(self):
+        total = sum(self.items.values())
+        return total
+
+cart = ShoppingCart()
+
+cart.add_item("Shirt", 2)
+cart.add_item("Jeans", 3)
+cart.add_item("Shoes", 4)
+
+cart.remove_item("Jeans")
+
+print("Total Price:", cart.total_price())
