@@ -18,7 +18,7 @@ def insert_data():
             user="root",
             password="",      # ✔ correct password
             port=3306,            # ✔ correct port
-            database="tkinterpython"  # ✔ correct database
+            database="data"  # ✔ correct database
         )
 
         cursor = con.cursor()
@@ -56,7 +56,7 @@ e_name.place(x=150, y=60)
 e_phone = Entry(root)
 e_phone.place(x=150, y=90)
 
-insert_btn = Button(root, text="Insert", font=('italic', 10), bg="white", command=insert_data)
+insert_btn = Button(root, text="Insert", font=('italic', 10), bg="grey", command=insert_data)
 insert_btn.place(x=20, y=140)
 
 root.mainloop()
