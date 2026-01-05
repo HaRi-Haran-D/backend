@@ -99,6 +99,7 @@ for num in range(6):
         print (num, end=" ")
     print("\n")
 '''
+
 # 9. Write a Python code to check if the given number is a palindrome. A palindrome number
 # reads the same forwards and backward. For example, 545 is a palindrome number.
 '''
@@ -143,6 +144,7 @@ Palindrome(str='545')
 Palindrome(str='121')
 Palindrome(str='125')
 '''
+
 # 10. Given two lists of numbers, write Python code to create a new list containing odd numbers
 # from the first list and even numbers from the second list.
 '''
@@ -158,6 +160,7 @@ def list(list1, list2):
 
 list(list1 = [10, 20, 25, 30, 35],list2 = [40, 45, 60, 75, 90])
 '''
+
 # 11. For example, If the given integer number is 7536, the output shall be “6 3 5 7“, with a
 # space separating the digits.
 '''
@@ -178,6 +181,7 @@ while number > 0:
     number = number // 10
     print(digit, end=" ")
 '''
+
 # 12. Calculate income tax for the given income by adhering to the rules below
 '''
 def tax(amt):
@@ -199,6 +203,7 @@ tax(amt=10000)
 tax(amt=20000)
 tax(amt=45000)
 '''
+
 # 13. The multiplication table from 1 to 10 is a table that shows the products of numbers from 1 to 10.
 '''
 def table(num):
@@ -208,6 +213,7 @@ def table(num):
             print(i * j, end= ' ')
 table(10)
 '''
+
 # 14. Print a downward half-pyramid pattern of stars
 '''
 for i in range(5,0,-1):
@@ -219,13 +225,57 @@ for i in range(6, 0, -1):
         print("*", end=' ')
     print(" ")
 '''
+
 # 15. Write a function called exponent(base, exp) that returns an int value of base raises to
 # the power of exp.
+'''
+# 1.
 def exponent(base, exp):
-    for i in base:
-        for j in exp:
+    nul=base
+    for i in range(1,exp):
+        nul *= base
+    return nul
+print(exponent(2,5))
+print(exponent(5,4))
 
+# 2.
+def exponent(base, exp):
+    num = exp
+    result = 1
+    while num > 0:
+        result = result * base
+        num = num - 1
+    print(base, "raises to the power of", exp, "is: ", result)
 
+exponent(5, 4)
+'''
 
+# 16. A palindrome number is a number that remains the same when its digits are reversed.
+# In simpler terms, it reads the same forwards and backward. For example 121, 5005.
+'''
+def palindrome(str):
+    if str == str[::-1]:
+        print(True)
+    else:
+        print(False)
 
+palindrome('121')
+palindrome('5005')
+'''
 
+# 17. Write a code to create a simple countdown timer of 5 seconds using a while loop.
+# Once the timer finishes (when the remaining time reaches zero), print a “Time’s up!” message.
+'''
+import time
+def countdown_timer(seconds):
+    while seconds > 0:
+        print(f"Time remaining: {seconds} seconds")
+        time.sleep(1)  # Pause for 1 second
+        seconds -= 1
+
+    print("Time's up!")
+
+countdown_timer(5)
+'''
+
+# 18. Generate Fibonacci series up to 15 terms
