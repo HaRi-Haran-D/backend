@@ -279,3 +279,84 @@ countdown_timer(5)
 '''
 
 # 18. Generate Fibonacci series up to 15 terms
+'''
+num1=0
+num2=1
+
+for i in range(0,15):
+    print(num1, end="  ")
+    res = num1+num2
+    num1=num2
+    num2=res
+'''
+
+# 19. Check if a given year is a leap year
+'''
+def leap(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+print(leap(2020))
+print(leap(2100))
+print(leap(2300))
+'''
+
+# 19. Print Alternate Prime Numbers till 20
+'''
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+# Set N
+n = 20
+primes = []  # List to store all prime numbers
+for num in range(2, n + 1):
+    if is_prime(num):
+        primes.append(num)
+
+# Printing all prime numbers
+print(f'All prime numbers from 1 to {n}: {primes}')
+
+# Printing alternate prime numbers from the list
+print(f'Alternate prime numbers from 1 to {n}:')
+
+for i in range(0, len(primes), 2):  # Step by 2 to get alternate primes
+    print(primes[i])
+'''
+
+# 20. Print Reverse Number Pattern
+'''
+n=1
+for i in range(6,1,-1):
+    for j in range(1,i):
+        print(n, end=" ")
+    print()
+    n += 1
+
+def print_pattern(rows):
+    for i in range(1, rows + 1):
+        for j in range(rows - i + 1):
+            print(i, end=" ")
+        print()
+
+print_pattern(5)
+'''
+# 21. Check if a user-entered string contains any digits using a for loop
+def integ(stri):
+    if 0 >= stri <= 9:
+        return True
+    else:
+        return False
+
+
