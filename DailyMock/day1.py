@@ -77,6 +77,36 @@ rotated = numbers[1:] + numbers[:1]
 print(rotated)
 '''
 
-# 9. 
+# 9. Dictionary & List Manipulation
+# Task: Given a list of dictionaries representing products:
 
+# products = [
+#     {"name": "Laptop", "price": 1000, "quantity": 5},
+#     {"name": "Phone", "price": 500, "quantity": 10},
+# ]
 
+# 10. Write a recursive function to calculate Fibonacci numbers.
+'''
+def fib(start, end):
+    num1 = 0
+    num2 = 1
+    for i in range(start, end):
+        result = num1 + num2
+        print(num1, end=' ')
+        num1 = num2
+        num2 = result
+
+fib(0,15)
+'''
+# 11. Write a recursive function to calculate factorial.
+'''
+def fact(n):
+    if n <= 0:
+        return 1
+    else:
+        return n*fact(n-1)
+
+print(fact(5))
+'''
+
+# 12. 
