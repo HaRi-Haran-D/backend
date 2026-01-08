@@ -71,6 +71,10 @@ print(n)
 print(list[::-1])
 """
 
+user1 = [101, 102, 103, 104]
+user2 = [103, 104, 105, 106]
 
+both = list(set(user1) & set(user2))
+print(both)
 
 
