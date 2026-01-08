@@ -180,20 +180,16 @@ a
 a>b
 True
 #types of operators:
-#1,Arithmetic operator +,-,*,/,%
-#2,Assignment operator 
-#3,Comparison operator/relation operator 
-#4,Membership operator
-#5,identity operator
-#6,logical operator
-#membership
-#in  not in
+#1,Arithmetic operator +,-,*,/,%,//
+#2,Assignment operator <,>,<=,>=
+#3,Comparison operator/relation operator #and,or, not
+#4,Membership operator in  not in
+#5,identity operator is,is not
+#6,logical operator +=,-=,/=,*=,//=
 
-#is,is not
 
-#and,or, not
-#+,-,*,/,%,//
-#+=,-=,/=,*=,//=
+
+
 
 #Builtin datatypes:
 #text type-str
