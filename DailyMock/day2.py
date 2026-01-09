@@ -70,11 +70,19 @@ print(n)
 
 print(list[::-1])
 """
-
+"""
 user1 = [101, 102, 103, 104]
 user2 = [103, 104, 105, 106]
 
 both = list(set(user1) & set(user2))
 print(both)
-
+"""
+n=[1,2,4,5,6,8,9,12]
+nn=[]
+for i in n:
+    if i == :
+        nn+=[i]
+    else:
+        nn+=[i+1]
+print(nn)
 

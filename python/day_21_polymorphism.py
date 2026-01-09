@@ -24,9 +24,11 @@ a3=a1*a2
 print(a3.salary)
 
 #Method Overriding
-#it means it refers defining a method in a subclass with its same name as a method as a sub class this is said to run time poly
-#we can always overwrite your parent class method when you have special or differrnt   that is i as to change and exchange the parent class behaviours
-#to change parent class behaviour
+#it means it refers defining a method in a subclass with its same name as a method as a sub class
+# this is said to run time poly we can always overwrite your parent class method when you have
+# special or different   that is i as to change and exchange the parent class behaviours to change
+# parent class behaviour
+
 #to extend parent class behaviour
 #to achieve runtime polymorphism
 
