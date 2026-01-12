@@ -1,3 +1,13 @@
+arr = [5,3,8,1]
+
+for i in range(len(arr)):
+    for j in range(0,len(arr)-1):
+        if arr[j]>arr[j+1]:
+            arr[j],arr[j+1] = arr[j+1], arr[j]
+print(arr)
+
+
+
 # 1. Print first 10 natural numbers using while loop
 """
 num=1
