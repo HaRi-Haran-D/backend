@@ -80,7 +80,7 @@ print(both)
 n=[1,2,4,5,6,8,9,12]
 nn=[]
 for i in n:
-    if i == :
+    if i == 0:
         nn+=[i]
     else:
         nn+=[i+1]
