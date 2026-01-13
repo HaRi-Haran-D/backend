@@ -145,7 +145,7 @@ for i in range(1,11):
 """
 
 # 13. Find the factorial of a given number
-
+"""
 # Using Forloop
 num = 5
 factorial = 1
@@ -166,5 +166,23 @@ def fact(num):
         return num*fact(num-1)
 
 print(fact(6))
+"""
+# 14. Reverse a integer number
 
-# 14.
+num = 76542
+reverse_number = 0
+while num > 0:
+    reminder = num % 10
+    reverse_number = (reverse_number * 10) + reminder
+    num = num // 10
+print("Revere Number ", reverse_number)
+
+
+
+num = 2345
+rev = 0
+while num > 0:
+    rem = num % 10
+    rev = (rev * 10) + rem
+    num = num // 10
+print(rev)
