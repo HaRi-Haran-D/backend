@@ -167,8 +167,9 @@ def fact(num):
 
 print(fact(6))
 """
-# 14. Reverse a integer number
 
+# 14. Reverse a integer number
+"""
 num = 76542
 reverse_number = 0
 while num > 0:
@@ -186,3 +187,38 @@ while num > 0:
     rev = (rev * 10) + rem
     num = num // 10
 print(rev)
+
+
+num=4567
+rev = 0
+while num > 0:
+    rem = num % 10
+    rev = (rev * 10) + rem
+    num = num // 10
+print(rev)
+"""
+
+# 15. Print elements from a given list present at odd index positions
+"""
+my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+for i in range(len(my_list)):
+    if i % 2 != 0:
+        print(my_list[i], end=" ")
+        
+for i in my_list[1::2]:
+    print(i, end=" ")
+"""
+
+# 16. Calculate the cube of all numbers from 1 to a given number
+def cube(num):
+    for i in range(1,num+1):
+        cube = i * i * i
+        print(f'Current Number is :{i} and the cube is {cube}')
+cube(10)
+
+# 17. Find the sum of a series of a number up to n terms
+#     Write a program to calculate the sum of this series up to n terms.
+#     For example, if the number is 2 and the number of terms is 5, then
+#     the series will be 2+22+222+2222+22222=2469
+
+
