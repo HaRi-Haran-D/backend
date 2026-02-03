@@ -352,6 +352,8 @@ def print_pattern(rows):
 
 print_pattern(5)
 '''
+
+
 # 21. Check if a user-entered string contains any digits using a for loop
 def integ(stri):
     if 0 >= stri <= 9:
