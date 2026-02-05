@@ -58,3 +58,12 @@ alter table students add column percentage decimal(2,2);
 
 -- to delete a column or data from the table
 delete from students where std_id=5;
+
+-- to select all the data from the table
+select * from students;
+
+-- to display specific column
+select std_name from students;
+
+-- to display specific column in order
+select * from students order by std_name;
