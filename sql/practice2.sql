@@ -45,5 +45,22 @@ select emp_name as Name, salary as Sal from employees;
 
 
 
-update employees set ph_no=5676, join_date='2025-08-09' where emp_id=4;
+update employees set ph_no=5676, join_date='2025-08-09' where emp_id=5;
 
+update employees set ph_no = 6969 where emp_id=5;
+
+delete from employees where emp_id =4;
+
+delete from employees;
+
+
+
+set autocommit = 0;
+commit;
+
+
+create table timestamp(
+	doj date,
+    date_time datetime,
+    Times time
+    );
