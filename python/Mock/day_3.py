@@ -1,9 +1,10 @@
 #1.
 '''
-intput = [1,0,5,6,0,3,0,0]
+
 #intput.sort()
 #print(intput)
 '''
+intput = [1,0,5,6,0,3,0,0]
 n=[]
 for i in range(0,len(intput)):
     if i < 3:
