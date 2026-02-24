@@ -33,6 +33,8 @@ insert into students (std_name,subjects) values('Hari', 'Maths');
 insert into students (std_name,subjects) values('JK', 'Science'),('Yuvi','Social'),('Jagath', 'Tamil'),('Suriya','Biology');
 insert into students (std_name,subjects) values('Suriya','Biology');
 insert into students (std_id,std_name,subjects) values(null,'Andrew','Maths');
+
+
 -- to view table with column data
 select * from students;
 
@@ -46,7 +48,7 @@ select * from students where std_name='Hari';
 
 
 -- to change the table data if exist
-update students set subjects = 'Sci' where subjects = 'Science';
+update students set subjects = 'Sci' where subjects = 'Science' limit 1;
 update students set subjects = 'Soc' where subjects = 'Social' limit 2;
 
 

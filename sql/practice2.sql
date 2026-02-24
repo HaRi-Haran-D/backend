@@ -2,6 +2,9 @@ create database stores;
 
 use stores;
 
+SET SQL_SAFE_UPDATES = 0;
+
+
 -- alter database read only = 0;
 
 
@@ -63,4 +66,34 @@ create table timestamp(
 	doj date,
     date_time datetime,
     Times time
+    );
+
+select * from timestamp;
+
+insert into timestamp values (current_date(),now(),current_time());
+
+delete from timestamp where doj=current_date();
+
+
+create table products(
+	p_id int,
+    p_name varchar(30) unique,
+    p_price decimal(6,2)
+    );
+    
+select * from products;
+
+insert into products values (1,'Kitkat',100.98);
+
+drop table products;
+
+alter table products add constraint primary key (p_id);
+
+-- alter table products add constraint checke (p_price < 100);
+
+
+create table transaction(
+	t_id int primary key auto_increment,
+    customer_id int,
+    foreign key(customer_id) references products(p_id)
     );
