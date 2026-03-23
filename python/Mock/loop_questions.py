@@ -210,11 +210,13 @@ for i in my_list[1::2]:
 """
 
 # 16. Calculate the cube of all numbers from 1 to a given number
+"""
 def cube(num):
     for i in range(1,num+1):
         cube = i * i * i
         print(f'Current Number is :{i} and the cube is {cube}')
 cube(10)
+"""
 
 # 17. Find the sum of a series of a number up to n terms
 #     Write a program to calculate the sum of this series up to n terms.
@@ -222,3 +224,16 @@ cube(10)
 #     the series will be 2+22+222+2222+22222=24690
 
 
+arr = [1, [2, 3], [4, [5, 6]], 7]
+# output [1, 2, 3, 4, 5, 6, 7]
+
+def flatten(arr):
+    new = []
+    for i in arr:
+        if isinstance(i,list):
+            new.extend(flatten(i))
+        else:
+            new+=[i]
+    return new
+arr = [1, [2, 3], [4, [5, 6]], 7]
+print(flatten(arr))
