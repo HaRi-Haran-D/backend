@@ -1,11 +1,11 @@
 arr = [5,3,8,1]
-
+"""
 for i in range(len(arr)):
     for j in range(0,len(arr)-1):
         if arr[j]>arr[j+1]:
             arr[j],arr[j+1] = arr[j+1], arr[j]
 print(arr)
-
+"""
 
 
 # 1. Print first 10 natural numbers using while loop
@@ -213,7 +213,7 @@ for i in my_list[1::2]:
 """
 def cube(num):
     for i in range(1,num+1):
-        cube = i * i * i
+        cube = i **3
         print(f'Current Number is :{i} and the cube is {cube}')
 cube(10)
 """
@@ -223,7 +223,7 @@ cube(10)
 #     For example, if the number is 2 and the number of terms is 5, then
 #     the series will be 2+22+222+2222+22222=24690
 
-
+"""
 arr = [1, [2, 3], [4, [5, 6]], 7]
 # output [1, 2, 3, 4, 5, 6, 7]
 
@@ -237,3 +237,51 @@ def flatten(arr):
     return new
 arr = [1, [2, 3], [4, [5, 6]], 7]
 print(flatten(arr))
+"""
+
+# 1. Reverse an Integer
+"""
+num = 107809
+
+def reverse_integer(num):
+    reverse = 0
+    while num > 0:
+        reminder = num % 10
+        reverse = (reverse * 10) + reminder
+        num = num // 10
+    return reverse
+
+print(reverse_integer(num))
+
+num = 547832
+print(reverse_integer(num))
+"""
+
+# 2. Fibonacci series upto the nth term
+"""
+def fibonacci(num):
+    first = 0
+    second = 1
+    while num > 0:
+        print(first, end=" ")
+        first, second = second, first+second
+        num -=1
+fibonacci(20)
+"""
+
+# 3. Fibonacci series upto the nth term
+"""
+def common_divisor(num1,num2):
+    if num1 > num2:
+        small = num2
+    else:
+        small = num1
+    for i in range(1, small+1):
+        if num1%i == 0 and num2%i == 0:
+            gcd = i
+    return gcd
+print(common_divisor(36,60))
+"""
+
+# 4.
+
