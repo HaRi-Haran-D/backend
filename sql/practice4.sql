@@ -153,3 +153,11 @@ select * from boxoffice inner join movies on boxoffice.movie_id = movies.id orde
 -- OR
 SELECT title, rating FROM movies JOIN boxoffice ON movies.id = boxoffice.movie_id ORDER BY rating DESC;
 
+
+
+
+-- find the nth smallest or largest number
+select salary from employee order by salary desc limit 1 offset 1;
+
+select salary from employee order by salary asc limit 1 offset 1;
+

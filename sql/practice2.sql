@@ -46,7 +46,9 @@ select emp_name, salary from employees;
 
 select emp_name as Name, salary as Sal from employees;
 
+select avg(salary) from employees;
 
+select emp_name, count(*) from employees group by emp_name;
 
 update employees set ph_no=5676, join_date='2025-08-09' where emp_id=5;
 

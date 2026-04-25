@@ -69,3 +69,12 @@ select std_name from students;
 
 -- to display specific column in order
 select * from students order by std_name;
+
+-- select * from students order by subjects asc, std_name desc;
+
+
+SELECT COUNT(*) FROM students;
+
+
+SELECT SUM(age) FROM students;
+SELECT AVG(age) FROM students;
