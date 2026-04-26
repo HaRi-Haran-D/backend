@@ -45,13 +45,16 @@ select emp_salary from employee order by emp_salary desc limit 1 offset 1;
 select emp_salary from employee order by emp_salary asc limit 1 offset 1;
 
 -- find nth smallest or largest without limit
-SELECT emp_salary 
-FROM employee e1
-WHERE (
-    SELECT COUNT(DISTINCT e2.emp_salary)
-    FROM employee e2
-    WHERE e2.emp_salary > e1.emp_salary
-) = 3;
+SELECT emp_salary FROM employee e1 WHERE (SELECT COUNT(DISTINCT e2.emp_salary)FROM employee e2 WHERE e2.emp_salary > e1.emp_salary) = 3;
+
+-- print last 3 rows
+select * from employee order by emp_id desc limit 3;
+select * from employee where emp_id > (select max(emp_id)-3 from employee);
+
+-- print last 4 rows
+select * from employee order by emp_id desc limit 4;
+select * from employee where emp_id > (select Max(emp_id)-4 from employee);
+
 
 create table department(
 		dept_id int primary key,
@@ -66,3 +69,10 @@ create table department(
 alter table department modify dept_headname varchar(100) primary key;
 -- insert into department values(101, "Team A","Chennai",);
 select * from employee;
+
+select emp_salary from employee e1 where (select count(distinct e2.emp_salary) from employee e2 where e2.emp_salary > e1.emp_salary) = 3;
+
+select emp_salary from employee order by emp_salary desc limit 1 offset 2;
+
+select * from employee where emp_id > (select max(emp_id)-3 from employee);
+

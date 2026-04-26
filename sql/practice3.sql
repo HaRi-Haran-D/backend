@@ -20,3 +20,6 @@ alter table employee add column emp_email varchar(25);
 alter table employee drop column emp_email;
 
 describe employee;
+
+
+select emp_salary from employee where emp_salary < (select max(emp_salary) from employee);
