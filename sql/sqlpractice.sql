@@ -121,7 +121,69 @@ select e.dept_id, e.name, d.dept_name from employee e join department d on e.dep
 -- 8. highest salary in each department
 select e.dept_id, e.name, e.salary from employee e join department d on e.dept_id = d.dept_id;
 
+select dept_id from employee union select dept_id from department;
+
+create view alldata as select * from employee;
+
+select * from alldata order by salary desc;
+
+select e.emp_id, e.name, e.salary, d.dept_name from employee e inner join department d on e.dept_id = d.dept_id order by e.salary desc;
+
+select e.emp_id, e.name, e.salary, d.dept_name from employee e join department d on e.dept_id = d.dept_id; 
+
+delimiter :
+create procedure EntireData()
+begin
+select * from employee;
+end:
+delimiter ;
+
+drop procedure EntireData;
+
+call EntireData();
+
+delimiter :
+create procedure AddData(in id int)
+begin
+	select * from employee where emp_id = id;
+end:
+delimiter ;
+call AddData(101);
+
+delimiter :
+create trigger beforeAdd
+before insert on employee
+for each row
+begin
+	set new.salary = IFNULL(new.salary, 35000);
+end:
+delimiter ;
+
+insert into employee(emp_id, name, dept_id, location, dob, gender, contact, joining_date) values 
+		(111, 'Hema', 2, 'Chennai', '2002-12-25', 'Female', '9000000011', '2025-06-18')
 
 
+delimiter :
+create trigger beforeUpdate
+before update on employee
+for each row
+begin
+	set new.salary = old.salary * 1.10;
+end:
+delimiter ;
 
+update employee set salary = 40000 where emp_id = 111;
 
+delimiter :
+create trigger beforedelete
+before delete on employee
+for each row
+begin
+	insert into project(project_id, project_name) values(404, old.name);
+end:
+delimiter ;
+
+drop trigger beforedelete;
+delete from employee where emp_id= 109;
+
+select * from project;
