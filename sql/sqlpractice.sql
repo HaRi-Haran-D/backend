@@ -119,7 +119,7 @@ select * from employee where emp_id > (select max(emp_id) from employee)-4;
 select e.dept_id, e.name, d.dept_name from employee e join department d on e.dept_id = d.dept_id;
 
 -- 8. highest salary in each department
-select e.dept_id, e.name, e.salary from employee e join department d on e.dept_id = d.dept_id
+select e.dept_id, e.name, e.salary from employee e join department d on e.dept_id = d.dept_id;
 
 
 
