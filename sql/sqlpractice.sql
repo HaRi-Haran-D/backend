@@ -148,7 +148,10 @@ begin
 	select * from employee where emp_id = id;
 end:
 delimiter ;
+
 call AddData(101);
+
+
 
 delimiter :
 create trigger beforeAdd
@@ -179,11 +182,11 @@ create trigger beforedelete
 before delete on employee
 for each row
 begin
-	insert into project(project_id, project_name) values(404, old.name);
+	insert into project(project_id, project_name) values(old.emp_id, old.name);
 end:
 delimiter ;
 
 drop trigger beforedelete;
-delete from employee where emp_id= 109;
+delete from employee where emp_id= 111;
 
 select * from project;
