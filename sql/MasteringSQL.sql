@@ -1,4 +1,6 @@
+create database cena;
 use cena;
+
 create table dep(
 depid int primary key,
 depname varchar(50),
@@ -97,3 +99,42 @@ select * from emp e
 where empsal=
 (select max(empsal) from emp where depid=e.depid);
 
+alter table emp add manager_id int;
+
+alter table emp add constraint fk_manager foreign key (manager_id) references emp(empid);
+
+update emp set manager_id = 1 where empid=2;
+
+-- inner join
+select e.empid, e.empname, d.depname from emp e inner join dep d on e.depid = d.depid;
+
+-- left join  (all employee from department even if there is no department) 
+select e.empid, e.empname, d.depname from emp e left join dep d on e.depid = d.depid;
+
+-- right join (all department even if it has no employee)
+select e.empid, e.empname, d.depname from emp e right join dep d on e.depid = d.depid;
+
+-- full join
+select e.empid, e.empname, d.depname from emp e left join dep d on e.depid = d.depid
+union
+select e.empid, e.empname, d.depname from emp e right join dep d on e.depid = d.depid;
+
+/* why sql does not spport full outer join?
+a full outer join returns all matching rows from both tables,
+along with that unmatched rows from both side filled with nulls so mysql focused on both left and right joins along with union,
+that is left join gives all rows from table 1.
+right join gives all row from table 2.
+union merges both tables and remove duplicates
+*/
+
+-- employee earning more than the manager
+select e.empname from emp e join emp d on e.manager_id = d.empid where e.empsal > m.empsal;
+
+-- count employees in each department
+select d.deptname from emp d;
+
+-- highest salary in each department
+select e.empname, max(e.empsal)as max_salary from emp e join dep d on e.depid = d.depid group by d.depname;
+
+-- employee table with same salary
+select e.empname, e1.empname, e.empsal from emp;
