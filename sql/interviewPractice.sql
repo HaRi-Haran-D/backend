@@ -76,3 +76,4 @@ select emp_salary from employee order by emp_salary desc limit 1 offset 2;
 
 select * from employee where emp_id > (select max(emp_id)-3 from employee);
 
+select emp_salary from (select emp_salary, dense_rank() over (order by emp_salary desc) as rnk from employee) as t where rnk =2;
